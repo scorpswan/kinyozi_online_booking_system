@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="#.css">
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation menu and user profile link -->
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="bookings.html">Booking</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="container">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <div class="icon"></div>
+        </label>
+        <div class="overlay"></div>
+        <div class="sidebar">
+            <div class="profile-info">
+                <a href="#">
+                    <img src="images/taper fade.jpg" alt="Profile Picture">
+                </a>
+                <h2>John Doe</h2>
+                
+            </div>
+            <ul class="navigation">
+                <li><a class="active" href="user.html">Dashboard</a></li>
+                <li><a href="#">My Bookings</a></li>
+                <li class="dropdown">
+                    <a href="#">Settings</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="update.html">Edit Profile</a></li>
+                        <li><a href="#">#</a></li>
+                    </ul>
+                </li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <!-- Main content of the user profile -->
+            <h1>Welcome, John Doe!</h1>
+            <p>This is your dashboard or other user-related content.</p>
+        </div>
+    </div>
+</body>
+</html>
+

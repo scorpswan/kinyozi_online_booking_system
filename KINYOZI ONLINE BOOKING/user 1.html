@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="#.css">
+    <link rel="stylesheet" type="text/css" href="user.css">
+    <script src="user_profile.js"></script>
+    <link rel="stylesheet" href="fullcalendar/core/main.css">
+    <link rel="stylesheet" href="fullcalendar/daygrid/main.css">
+    <script src="fullcalendar/core/main.js"></script>
+    <script src="fullcalendar/daygrid/main.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+    <!--<script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const calendarEl = document.getElementById('calendar')
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth'
+          })
+          calendar.render()
+        })
+  
+      </script>-->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid'],
+                events: 'events.php', // PHP script to fetch calendar events
+            });
+            calendar.render();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Navigation menu and user profile link -->
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="bookings.html">Booking</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--<?php
+        session_start();
+        Check if the user is logged in (modify the condition accordingly)
+        if (isset($_SESSION['username'])) { 
+             User is logged in, so display the user profile link
+            echo '<a href="user.html">Profile</a>';
+        } else {
+             User is not logged in, so display the login link
+            echo '<a href="login.html">Login</a>';
+        }
+        ?>-->
+
+        
+    </header>
+    <h1>User Profile</h1>
+    <main>
+        
+        <div id="user-info">
+            <img id="profile-image" src="images/taper fade.jpg" alt="User Profile" class="round-image">
+            <h2 id="username">John Doe</h2>
+            <p id="email">johndoe@example.com</p>
+        </div>
+        <a href="update.html" class="cta-button">Edit Profile</a>
+        <a href="logout.php">Logout</a>
+
+        <div id="profile-form" style="display: none;">
+            <h2>Edit Your Profile</h2>
+            <form action="update-profile.php" method="POST">
+                <div>
+                    <label for="username">Username: </label>
+                    <input type="text" id="new-username" placeholder="New Username">
+                </div>
+                
+                <div>
+                    <label for="email">Email </label>
+                    <input type="text" id="new-email" placeholder="New Email">
+                </div>
+
+                <div>
+                    <label for="password">Password </label>
+                    <input type="password" id="new-password" placeholder="New Password">
+                </div>
+
+                <button id="save-changes">Save Changes</button>
+                
+            </form>
+        </div>
+        <div id="calendar"></div>
+
+    </main>
+</body>
+</html>

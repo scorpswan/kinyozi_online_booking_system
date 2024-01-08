@@ -1,0 +1,110 @@
+/* Basic reset */
+body, h1, h2, h3, p, ul, li, button, input, select {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .services,
+  .stylists,
+  .appointment {
+    margin-bottom: 30px;
+  }
+  
+  .services h2,
+  .stylists h2,
+  .appointment h2 {
+    margin-bottom: 10px;
+  }
+  
+  .services ul,
+  .stylists,
+  .appointment form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services ul li {
+    margin-bottom: 10px;
+  }
+  
+  .stylist-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .stylist-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .stylist-card h3 {
+    margin-bottom: 5px;
+  }
+  
+  .stylist-card p {
+    margin-bottom: 10px;
+  }
+  
+  .appointment label,
+  .appointment input,
+  .appointment select,
+  .appointment button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .appointment button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1);
+  }
+  

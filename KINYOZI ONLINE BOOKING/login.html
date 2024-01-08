@@ -1,0 +1,43 @@
+<?php
+session_start();
+if (isset($_SESSION['user_username'])) {
+    header("Location: user.html"); // Redirect to the user profile page if the user is already logged in
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="bookings.html">Booking</a></li>
+                <li><a class="active" href="./login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="login-container">
+        <form action="login-process.php" method="POST">
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Your Username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Your Password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+   
+</body>
+</html>

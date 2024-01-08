@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinyozi Online Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Include CSS and JavaScript files -->
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./bookings.html">Booking</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- User Profile Section (show when logged in) -->
+        <div id="user-profile">
+            <img src="#" alt="User Profile">
+            <a href="user.html">Manage Profile</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="photo">
+            <img src="images/barber.jpg" alt="Kinyozi Image" class="round-image">
+        </div>
+        
+        <h1>Welcome to Our Kinyozi</h1>
+        <p>Your source for stylish haircuts and grooming services.</p>
+        <a href="login.html" class="cta-button">Book Now</a>
+    </section>
+
+    <!-- Service Offerings Section -->
+    <section id="services">
+        <h3>Our Services</h3>
+        <div class="service-offers">
+            <div class="service">
+                <img src="images/ME3.jpg" alt="Haircut">
+                <h2>Haircut</h2>
+                <p>Our experienced barbers offer trendy haircuts.</p>
+            </div>
+            <!-- Add more service offerings here -->
+            <div class="service">
+                <img src="images/ME3.jpg" alt="Haircut">
+                <h2>Haircut</h2>
+                <p>Our experienced barbers offer trendy haircuts.</p>
+            </div>
+            <div class="service">
+                <img src="images/ME3.jpg" alt="Haircut">
+                <h2>Haircut</h2>
+                <p>Our experienced barbers offer trendy haircuts.</p>
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <!-- Booking form with service selection, date, and time slots -->
+        <form action="booking-process.php" method="POST">
+            <!-- Form fields go here -->
+            <button type="submit" class="cta-button">Proceed to Payment</button>
+        </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="testimonial">
+            <img src="images/taper fade.jpg" alt="Customer Photo">
+            <p>"Great haircut and excellent service!"</p>
+            <cite>- John Doe</cite>
+        </div>
+        <!-- Add more testimonials here -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Contact Information, Links, Social Media Icons, Copyright Notice, and Subscribe Form -->
+        <div style="display: flex; gap:1rem; align-items:center" >
+            <p>You can also reach us on:</p>
+            <div style="display: flex; gap:1rem;" class="icons-container">
+                <a href="#facebook" class="facebook">   
+                <i class="fa fa-facebook"></i>   
+                </a>   
+                <a href="#twitter" class="twitter">   
+                <i class="fa fa-twitter"></i>   
+                </a> 
+                <a href="#instagram" class="instagram">
+                <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#linkedin" class="linkedin">
+                <i class="fa fa-linkedin"></i>
+                </a>
+
+
+            </div>    
+        </div>
+        <p>&copy; 2023 YourWebsite.com</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Kinyozi Online Booking</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Stylists</a></li>
+        <li><a href="#">Book Appointment</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services">
+      <h2>Services Offered</h2>
+      <!-- Display services available -->
+      <ul>
+        <li>Haircut</li>
+        <li>Shave</li>
+        <li>Beard Trim</li>
+        <!-- Add more services here -->
+      </ul>
+    </section>
+
+    <section class="stylists">
+      <h2>Our Stylists</h2>
+      <!-- Display available stylists -->
+      <div class="stylist-card">
+        <img src="stylist1.jpg" alt="Stylist 1">
+        <h3>Stylist Name</h3>
+        <p>Specialty: Haircut, Shave</p>
+        <button>Select</button>
+      </div>
+      <!-- Add more stylist cards here -->
+    </section>
+
+    <section class="appointment">
+      <h2>Book an Appointment</h2>
+      <!-- Form to book an appointment -->
+      <form action="book_appointment.php" method="post">
+        <label for="service">Select Service:</label>
+        <select id="service" name="service">
+          <option value="haircut">Haircut</option>
+          <option value="shave">Shave</option>
+          <option value="beard_trim">Beard Trim</option>
+          <!-- Add more service options here -->
+        </select>
+
+        <label for="stylist">Select Stylist:</label>
+        <select id="stylist" name="stylist">
+          <option value="stylist1">Stylist 1</option>
+          <!-- Add more stylist options here -->
+        </select>
+
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit">Book Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Kinyozi Online Booking</p>
+  </footer>
+</body>
+</html>

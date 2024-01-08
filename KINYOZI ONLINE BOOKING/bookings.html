@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Bookings</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a class="active"href="./bookings.html">Booking</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header> 
+  <div class="container">
+    <h1>Barber Styles and Prices</h1>
+    <div class="barber-styles">
+        <div class="style">
+            <img src="style1.jpg" alt="Style 1">
+            <p>Style 1</p>
+            <p>$30</p>
+            <button onclick="book('Style 1', '$30')">Book Now</button>
+        </div>
+        <div class="style">
+            <img src="style2.jpg" alt="Style 2">
+            <p>Style 2</p>
+            <p>$25</p>
+            <button onclick="book('Style 2', '$25')">Book Now</button>
+        </div>
+        <!-- Add more barber styles -->
+    </div>
+</div>
+
+<div id="bookingConfirmation" class="booking-popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div class="content">
+        <h2>Booking Confirmation</h2>
+        <p id="bookingDetails"></p>
+    </div>
+</div>
+
+<script>
+    function book(style, price) {
+        // Simulate booking process (can be replaced with form submission to PHP)
+        var details = "You booked: " + style + " for " + price;
+        document.getElementById("bookingDetails").innerHTML = details;
+        document.getElementById("bookingConfirmation").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("bookingConfirmation").style.display = "none";
+    }
+</script>
+</body>
+</html>
